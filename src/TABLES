@@ -1,0 +1,307 @@
+INSERT INTO DEPARTMENT (dept_id, dept_name, location) VALUES 
+(1, 'Cardiology', 'Building A, 3rd Floor'),
+(2, 'Pediatrics', 'Building B, 1st Floor'),
+(3, 'Neurology', 'Building A, 4th Floor'),
+(4, 'Orthopedics', 'Building C, Ground Floor'),
+(5, 'Emergency', 'Building D, 1st Floor');
+
+
+
+
+
+
+
+INSERT INTO STAFF (name, role, shift, hire_date, dept_id) VALUES 
+('Alice Johnson', 'Nurse', 'Day', '2023-03-15', 1),
+('Bob Smith', 'Receptionist', 'Night', '2024-01-10', 2),
+('Charlie Brown', 'Lab Technician', 'Day', '2022-08-22', 1),
+('Diana Prince', 'Nurse', 'Night', '2021-05-14', 3),
+('Evan Wright', 'Security', 'Day', '2025-02-11', 4),
+('Fiona Gallagher', 'Nurse', 'Day', '2023-11-01', 2),
+('George Clark', 'Administrator', 'Day', '2020-01-15', 3),
+('Hannah Abbott', 'Receptionist', 'Day', '2024-06-18', 5),
+('Ian Malcolm', 'Data Analyst', 'Day', '2022-10-05', 1),
+('Julia Roberts', 'Nurse', 'Night', '2023-04-20', 5),
+('Kevin Bacon', 'Physiotherapist', 'Day', '2021-08-30', 4),
+('Laura Croft', 'Security', 'Night', '2024-09-01', 5),
+('Michael Scott', 'Office Manager', 'Day', '2019-04-01', 2),
+('Nancy Drew', 'Records Clerk', 'Day', '2023-07-12', 3),
+('Oscar Martinez', 'Accountant', 'Day', '2020-11-15', 4),
+('Pam Beesly', 'Receptionist', 'Day', '2021-03-22', 1),
+('Quentin Tarantino', 'Radiology Tech', 'Night', '2022-05-19', 4),
+('Rachel Green', 'Nurse', 'Day', '2024-02-14', 2),
+('Sam Winchester', 'Orderly', 'Night', '2023-10-31', 5),
+('Tina Turner', 'Nurse', 'Day', '2022-01-25', 3),
+('Umar Khalid', 'Lab Technician', 'Night', '2025-01-10', 1),
+('Victor Stone', 'IT Support', 'Day', '2024-05-05', 4),
+('Wendy Darling', 'Nurse', 'Day', '2023-08-19', 2),
+('Xavier Hernandez', 'Pharmacist', 'Day', '2021-06-30', 5),
+('Yolanda Foster', 'Receptionist', 'Night', '2024-11-20', 3);
+
+
+
+
+
+
+
+
+
+INSERT INTO DOCTOR (name, specialization, phone, email, hire_date, dept_id) VALUES 
+('Dr. Sarah Lin', 'Cardiologist', '555-0192', 'sarah.lin@hospital.com', '2020-05-11', 1),
+('Dr. David Kim', 'Pediatrician', '555-0143', 'david.kim@hospital.com', '2018-11-01', 2),
+('Dr. Elena Rostova', 'Neurologist', '555-0211', 'elena.r@hospital.com', '2019-03-22', 3),
+('Dr. Marcus Vance', 'Orthopedic Surgeon', '555-0344', 'marcus.v@hospital.com', '2021-07-14', 4),
+('Dr. Tom Watson', 'Emergency Physician', '555-0988', 'tom.w@hospital.com', '2022-01-10', 5),
+('Dr. Angela Yu', 'Cardiologist', '555-0155', 'angela.yu@hospital.com', '2021-09-18', 1),
+('Dr. Benjamin Sisko', 'Pediatrician', '555-0177', 'ben.sisko@hospital.com', '2017-04-12', 2),
+('Dr. Catherine Halsey', 'Neurosurgeon', '555-0288', 'c.halsey@hospital.com', '2015-08-05', 3),
+('Dr. Daniel Jackson', 'Sports Medicine', '555-0311', 'd.jackson@hospital.com', '2023-02-28', 4),
+('Dr. Elizabeth Weir', 'Trauma Specialist', '555-0922', 'e.weir@hospital.com', '2020-11-11', 5),
+('Dr. Frank Fontana', 'Interventional Cardiology', '555-0166', 'f.fontana@hospital.com', '2016-12-01', 1),
+('Dr. Grace Augustine', 'Neonatologist', '555-0122', 'g.augustine@hospital.com', '2019-10-10', 2),
+('Dr. Henry Jekyll', 'Neurologist', '555-0233', 'h.jekyll@hospital.com', '2018-06-15', 3),
+('Dr. Iris West', 'Orthopedic Resident', '555-0322', 'i.west@hospital.com', '2024-07-01', 4),
+('Dr. Jonathan Archer', 'ER Doctor', '555-0955', 'j.archer@hospital.com', '2021-03-14', 5),
+('Dr. Katherine Pulaski', 'Cardiologist', '555-0133', 'k.pulaski@hospital.com', '2014-05-20', 1),
+('Dr. Leonard McCoy', 'Pediatric Surgeon', '555-0188', 'l.mccoy@hospital.com', '2013-09-09', 2),
+('Dr. Meredith Grey', 'General Surgeon', '555-0911', 'm.grey@hospital.com', '2015-07-07', 5),
+('Dr. Neil Melendez', 'Surgical Neuro', '555-0244', 'n.melendez@hospital.com', '2020-02-14', 3),
+('Dr. Owen Hunt', 'Trauma Surgeon', '555-0966', 'o.hunt@hospital.com', '2017-10-01', 5),
+('Dr. Perry Cox', 'Chief of Medicine', '555-0777', 'p.cox@hospital.com', '2010-01-01', 1),
+('Dr. Robert Chase', 'Intensivist', '555-0788', 'r.chase@hospital.com', '2018-04-16', 5),
+('Dr. Stephen Strange', 'Neurosurgeon', '555-0888', 's.strange@hospital.com', '2016-05-12', 3),
+('Dr. Shaun Murphy', 'Orthopedics resident', '555-0399', 'shaun.m@hospital.com', '2022-08-24', 4),
+('Dr. Eric Foreman', 'Neurologist', '555-0255', 'e.foreman@hospital.com', '2019-11-30', 3);
+
+
+
+
+
+
+
+
+
+
+INSERT INTO PATIENT (first_name, last_name, dob, gender, address, phone) VALUES 
+('John', 'Doe', '1985-07-20', 'Male', '123 Main St, Springfield', '555-4321'),
+('Jane', 'Smith', '2015-03-12', 'Female', '456 Oak Rd, Riverdale', '555-8765'),
+('Robert', 'Paulson', '1972-11-03', 'Male', '512 Paper St, Bradford', '555-1999'),
+('Mary', 'Jane', '1998-05-25', 'Female', '20 Ingram St, Queens', '555-7890'),
+('Bruce', 'Wayne', '1980-02-19', 'Male', '1007 Mountain Drive, Gotham', '555-0000'),
+('Clark', 'Kent', '1982-06-10', 'Male', '344 Clinton St, Metropolis', '555-3333'),
+('Diana', 'Prince', '1976-03-22', 'Female', '777 Gateway Blvd, Themyscira', '555-4444'),
+('Peter', 'Parker', '2001-08-10', 'Male', '20 Ingram St, Forest Hills', '555-1212'),
+('Tony', 'Stark', '1970-05-29', 'Male', '10880 Malibu Point, California', '555-3000'),
+('Steve', 'Rogers', '1918-07-04', 'Male', '569 Lefferts Ave, Brooklyn', '555-1941'),
+('Natasha', 'Romanoff', '1984-11-22', 'Female', 'Unknown Address, New York', '555-9991'),
+('Bruce', 'Banner', '1969-12-18', 'Male', 'CCD Lab, Culver University', '555-4855'),
+('Thor', 'Odinson', '1983-04-11', 'Male', '1 Asgard Way, Valhalla', '555-7771'),
+('Arthur', 'Dent', '1978-10-15', 'Male', '15 Cottington Lane, West Country', '555-4242'),
+('Sarah', 'Connor', '1965-09-13', 'Female', 'Placerita Canyon Road, LA', '555-1984'),
+('Ellen', 'Ripley', '2092-01-07', 'Female', 'Nostromo Deck A, Deep Space', '555-2179'),
+('Luke', 'Skywalker', '1999-05-25', 'Male', 'Lars Homestead, Tatooine', '555-0321'),
+('Leia', 'Organa', '1999-05-25', 'Female', 'Royal Palace, Alderaan', '555-0322'),
+('Han', 'Solo', '1990-11-11', 'Male', 'Corellia Dock 9, Outer Rim', '555-0099'),
+('Indiana', 'Jones', '1899-07-01', 'Male', 'Marshall College, Connecticut', '555-1936'),
+('James', 'Bond', '1968-04-13', 'Male', 'MI6 HQ, London', '555-0007'),
+('Sherlock', 'Holmes', '1854-01-06', 'Male', '221B Baker St, London', '555-1887'),
+('John', 'Watson', '1852-07-07', 'Male', '221B Baker St, London', '555-1888'),
+('Harry', 'Potter', '1980-07-31', 'Male', '4 Privet Drive, Little Whinging', '555-9344'),
+('Hermione', 'Granger', '1979-09-19', 'Female', 'Heathgate Suburbs, London', '555-9345');
+
+
+
+
+
+
+
+INSERT INTO APPOINTMENT (appointment_datetime, status, reason, doctor_id, patient_id) VALUES 
+('2026-09-14 10:00:00', 'Scheduled', 'Routine checkup', 1, 1),
+('2026-09-14 11:30:00', 'Completed', 'Fever and cough', 2, 2),
+('2026-09-15 09:00:00', 'Completed', 'Severe migraines', 3, 3),
+('2026-09-15 14:00:00', 'Scheduled', 'Knee joint pain consultation', 4, 4),
+('2026-09-16 08:00:00', 'Completed', 'Emergency chest wound trauma', 5, 5),
+('2026-09-16 10:30:00', 'Cancelled', 'Heart palpitations tracking', 6, 6),
+('2026-09-16 13:00:00', 'Completed', 'Childhood immunization plan', 7, 7),
+('2026-09-17 11:00:00', 'Scheduled', 'Chronic memory loss review', 8, 8),
+('2026-09-17 15:30:00', 'Completed', 'Sprained wrist physical check', 9, 9),
+('2026-09-18 07:45:00', 'Completed', 'Acute appendicitis attack', 10, 10),
+('2026-09-18 09:15:00', 'Scheduled', 'Arterial hypertension screening', 11, 11),
+('2026-09-18 14:15:00', 'Completed', 'Infant developmental milestones', 12, 12),
+('2026-09-19 10:00:00', 'Completed', 'Sciatica evaluation', 13, 13),
+('2026-09-19 11:00:00', 'Scheduled', 'Ankle fracture follow-up', 14, 14),
+('2026-09-19 23:30:00', 'Completed', 'Allergic reaction emergency', 15, 15),
+('2026-09-20 09:30:00', 'Scheduled', 'Post-stroke motor skills check', 25, 16),
+('2026-09-20 13:45:00', 'Completed', 'General weakness assessment', 18, 17),
+('2026-09-21 08:30:00', 'Scheduled', 'Surgical consultation', 20, 18),
+('2026-09-21 10:00:00', 'Completed', 'Echocardiogram breakdown', 21, 19),
+('2026-09-21 14:00:00', 'Completed', 'Asthma exacerbation crisis', 22, 20),
+('2026-09-22 09:00:00', 'No Show', 'Carpal tunnel exam', 24, 21),
+('2026-09-22 11:30:00', 'Completed', 'Persistent vertigo triggers', 19, 22),
+('2026-09-22 16:00:00', 'Scheduled', 'Advanced cardiac rehab review', 1, 23),
+('2026-09-23 08:00:00', 'Completed', 'High fever pediatric consult', 2, 24),
+('2026-09-23 10:30:00', 'Scheduled', 'Herniated disc management', 4, 25);
+
+
+
+
+
+
+
+
+
+INSERT INTO MEDICAL_RECORD (diagnosis, treatment, notes, record_date, patient_id, doctor_id) VALUES 
+('Mild Arrhythmia', 'Prescribed Beta-blockers', 'Patient to return in 3 months', '2026-09-14', 1, 1),
+('Common Cold', 'Rest and fluids', 'Monitor temperature', '2026-09-14', 2, 2),
+('Migraine Variant', 'Triptan therapy', 'Avoid dietary triggers', '2026-09-15', 3, 3),
+('Osteoarthritis', 'Cortisone injection', 'Schedule physical therapy', '2026-09-15', 4, 4),
+('Laceration Cleaned', 'Stitches and Tetanus shot', 'Keep dry for 48 hours', '2026-09-16', 5, 5),
+('Angina Pectoris', 'Nitroglycerin sublingual', 'Rest scheduled immediately', '2026-09-16', 6, 6),
+('Healthy Child Status', 'MMR Booster administered', 'Mild sore arm expected', '2026-09-16', 7, 7),
+('Early Dementia stage', 'Cholinesterase inhibitors', 'Family counseling recommended', '2026-09-17', 8, 8),
+('Grade 1 Sprain', 'RICE protocol', 'Wrist splint for 1 week', '2026-09-17', 9, 9),
+('Acute Appendicitis', 'Laparoscopic Appendectomy', 'Post-op liquid diet', '2026-09-18', 10, 10),
+('Stage 1 Hypertension', 'ACE Inhibitors daily', 'Lower sodium diet intake', '2026-09-18', 11, 11),
+('Normal Milestone progress', 'No treatment required', 'Continue formula adjustment', '2026-09-18', 12, 12),
+('Lumbar Radiculopathy', 'NSAIDs and Epidural check', 'Do not lift heavy weights', '2026-09-19', 13, 13),
+('Healing Fracture', 'Fiberglass cast swap', 'Bone building up nicely', '2026-09-19', 14, 14),
+('Anaphylactic Shock', 'EpiPen self-admin verification', 'Observed for 4 hours clear', '2026-09-19', 15, 15),
+('Transient Ischemic Attack', 'Blood thinners initiated', 'Schedule full MRI brain scan', '2026-09-20', 16, 25),
+('Anemia Profiles', 'Iron supplements prescribed', 'Recheck CBC in 30 days', '2026-09-20', 17, 18),
+('Cholelithiasis', 'Gallbladder surgery setup', 'NPO after midnight before date', '2026-09-21', 18, 20),
+('Aortic Regurgitation', 'Valvular tracking schema', 'Schedule yearly echo test', '2026-09-21', 19, 21),
+('Bronchospasm', 'Albuterol nebulizer round', 'O2 sats returned to 98%', '2026-09-21', 20, 22),
+('Carpal Tunnel Syndrome', 'Night splints application', 'Discuss release surgery if fails', '2026-09-22', 21, 24),
+('Benign Vertigo', 'Epley Maneuver completed', 'Immediate relief reported', '2026-09-22', 22, 19),
+('Coronary Artery Disease', 'Statin dosage modification', 'Exercise limits clarified', '2026-09-22', 23, 1),
+('Streptococcal Pharyngitis', 'Penicillin Course 10 days', 'Stay home until fever breaks', '2026-09-23', 24, 2),
+('Degenerative Disc Disease', 'Core strengthening guide', 'Avoid sudden twists', '2026-09-23', 25, 4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO BILLING (bill_date, total_amount, payment_status, appointment_id) VALUES 
+('2026-09-14', 150.00, 'Paid', 1),
+('2026-09-14', 85.50, 'Pending', 2),
+('2026-09-15', 200.00, 'Paid', 3),
+('2026-09-15', 350.00, 'Pending', 4),
+('2026-09-16', 1500.00, 'Paid', 5),
+('2026-09-16', 0.00, 'Cancelled', 6),
+('2026-09-16', 60.00, 'Paid', 7),
+('2026-09-17', 180.00, 'Pending', 8),
+('2026-09-17', 120.00, 'Paid', 9),
+('2026-09-18', 4500.00, 'Paid', 10),
+('2026-09-18', 95.00, 'Paid', 11),
+('2026-09-18', 75.00, 'Pending', 12),
+('2026-09-19', 210.00, 'Paid', 13),
+('2026-09-19', 130.00, 'Pending', 14),
+('2026-09-19', 850.00, 'Paid', 15),
+('2026-09-20', 400.00, 'Pending', 16),
+('2026-09-20', 110.00, 'Paid', 17),
+('2026-09-21', 300.00, 'Paid', 18),
+('2026-09-21', 250.00, 'Paid', 19),
+('2026-09-21', 520.00, 'Pending', 20),
+('2026-09-22', 50.00, 'Pending', 21),
+('2026-09-22', 160.00, 'Paid', 22),
+('2026-09-22', 140.00, 'Paid', 23),
+('2026-09-23', 90.00, 'Paid', 24),
+('2026-09-23', 220.00, 'Pending', 25);
+
+
+
+
+
+
+
+
+
+
+INSERT INTO MEDICATION (medication_name, dosage_instructions, quantity, cost) VALUES 
+('Metoprolol', 'Take 50mg once daily in the morning', 30, 25.00),
+('Amoxicillin', 'Take 500mg three times daily for 7 days', 21, 15.75),
+('Sumatriptan', 'Take 50mg at onset of migraine headache', 6, 45.00),
+('Celecoxib', 'Take 100mg twice daily with meals', 20, 32.10),
+('Vicodin', 'Take 1 tablet every 4-6 hours as needed for severe pain', 15, 60.00),
+('Nitroglycerin Spray', '1 spray sublingually every 5 min up to 3 times during angina', 1, 18.50),
+('Acetaminophen', 'Take 500mg every 6 hours for body pain/fever', 50, 8.00),
+('Donepezil', 'Take 10mg once daily at bedtime', 30, 55.40),
+('Ibuprofen', 'Take 400mg every 8 hours with food for swelling', 30, 6.50),
+('Ciprofloxacin', 'Take 500mg twice daily for 5 days', 10, 22.00),
+('Lisinopril', 'Take 10mg once daily in the morning', 30, 12.00),
+('Vitamin D3 Drops', 'Give 400 IU once daily via oral dropper', 1, 14.20),
+('Gabapentin', 'Take 300mg three times daily for nerve path comfort', 90, 48.00),
+('Calcium Supplements', 'Take 500mg twice daily with Vitamin C', 60, 11.50),
+('EpiPen Auto-Injector', 'Inject intramuscularly immediately if exposure happens', 2, 290.00),
+('Clopidogrel', 'Take 75mg once daily with water', 30, 38.00),
+('Ferrous Sulfate', 'Take 325mg daily on empty stomach', 60, 9.99),
+('Ondansetron', 'Dissolve 4mg tablet on tongue every 8 hours for nausea', 10, 19.50),
+('Atorvastatin', 'Take 20mg once daily at dinner time', 30, 14.50),
+('Albuterol Inhaler', 'Inhale 2 puffs every 4 to 6 hours as needed', 1, 35.00),
+('Meloxicam', 'Take 15mg once daily for arthritis control', 30, 17.80),
+('Meclizine', 'Take 25mg every 8 hours for vertigo spells', 20, 13.25),
+('Prednisone', 'Take 20mg daily with breakfast for short course inflammation', 10, 7.50),
+('Penicillin VK', 'Take 250mg four times daily on empty stomach', 40, 18.00),
+('Tramadol', 'Take 50mg every 6 hours for chronic back pains', 30, 28.50);
+
+
+
+
+
+
+
+
+INSERT INTO PRESCRIPTION (prescription_date, appointment_id, medication_id) VALUES 
+('2026-09-14', 1, 1),
+('2026-09-14', 2, 2),
+('2026-09-15', 3, 3),
+('2026-09-15', 4, 4),
+('2026-09-16', 5, 5),
+('2026-09-16', 6, 6),
+('2026-09-16', 7, 7),
+('2026-09-17', 8, 8),
+('2026-09-17', 9, 9),
+('2026-09-18', 10, 10),
+('2026-09-18', 11, 11),
+('2026-09-18', 12, 12),
+('2026-09-19', 13, 13),
+('2026-09-19', 14, 14),
+('2026-09-19', 15, 15),
+('2026-09-20', 16, 16),
+('2026-09-20', 17, 17),
+('2026-09-21', 18, 18),
+('2026-09-21', 19, 19),
+('2026-09-21', 20, 20),
+('2026-09-22', 21, 21),
+('2026-09-22', 22, 22),
+('2026-09-22', 23, 23),
+('2026-09-23', 24, 24),
+('2026-09-23', 25, 25);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

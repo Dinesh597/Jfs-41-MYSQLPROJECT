@@ -1,0 +1,94 @@
+1. DEPARTMENT Table
+CREATE TABLE DEPARTMENT (
+    dept_id INT AUTO_INCREMENT PRIMARY KEY,
+    dept_name VARCHAR(100) NOT NULL,
+    location VARCHAR(255)
+);
+
+2. STAFF Table
+CREATE TABLE STAFF (
+    staff_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    role VARCHAR(50),
+    shift VARCHAR(50),
+    hire_date DATE,
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES DEPARTMENT(dept_id) ON DELETE SET NULL
+);
+
+3. DOCTOR Table
+CREATE TABLE DOCTOR (
+    doctor_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    specialization VARCHAR(100),
+    phone VARCHAR(20),
+    email VARCHAR(100),
+    hire_date DATE,
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES DEPARTMENT(dept_id) ON DELETE SET NULL
+);
+
+4. PATIENT Table
+CREATE TABLE PATIENT (
+    patient_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    dob DATE,
+    gender VARCHAR(10),
+    address VARCHAR(255),
+    phone VARCHAR(20)
+);
+
+5. APPOINTMENT Table
+CREATE TABLE APPOINTMENT (
+    appointment_id INT AUTO_INCREMENT PRIMARY KEY,
+    appointment_datetime DATETIME NOT NULL,
+    status VARCHAR(50),
+    reason TEXT,
+    doctor_id INT,
+    patient_id INT,
+    FOREIGN KEY (doctor_id) REFERENCES DOCTOR(doctor_id) ON DELETE CASCADE,
+    FOREIGN KEY (patient_id) REFERENCES PATIENT(patient_id) ON DELETE CASCADE
+);
+
+6. MEDICAL_RECORD Table
+CREATE TABLE MEDICAL_RECORD (
+    record_id INT AUTO_INCREMENT PRIMARY KEY,
+    diagnosis TEXT,
+    treatment TEXT,
+    notes TEXT,
+    record_date DATE,
+    patient_id INT,
+    doctor_id INT,
+    FOREIGN KEY (patient_id) REFERENCES PATIENT(patient_id) ON DELETE CASCADE,
+    FOREIGN KEY (doctor_id) REFERENCES DOCTOR(doctor_id) ON DELETE CASCADE
+);
+
+7. BILLING Table
+CREATE TABLE BILLING (
+    bill_id INT AUTO_INCREMENT PRIMARY KEY,
+    bill_date DATE NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    payment_status VARCHAR(50),
+    appointment_id INT,
+    FOREIGN KEY (appointment_id) REFERENCES APPOINTMENT(appointment_id) ON DELETE CASCADE
+);
+
+8. MEDICATION Table
+CREATE TABLE MEDICATION (
+    medication_id INT AUTO_INCREMENT PRIMARY KEY,
+    medication_name VARCHAR(100) NOT NULL,
+    dosage_instructions TEXT,
+    quantity INT,
+    cost DECIMAL(10, 2)
+);
+
+9. PRESCRIPTION Table
+CREATE TABLE PRESCRIPTION (
+    prescription_id INT AUTO_INCREMENT PRIMARY KEY,
+    prescription_date DATE NOT NULL,
+    appointment_id INT,
+    medication_id INT,
+    FOREIGN KEY (appointment_id) REFERENCES APPOINTMENT(appointment_id) ON DELETE CASCADE,
+    FOREIGN KEY (medication_id) REFERENCES MEDICATION(medication_id) ON DELETE CASCADE
+);
